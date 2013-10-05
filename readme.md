@@ -43,7 +43,7 @@ example.go
 	    client := spamc.New()
 
 	    //the 2nd parameter is optional, you can set who (the unix user) do the call
-	    reply, err := client.Check(html, "saintienn")
+	    reply, _ := client.Check(html, "saintienn")
 
 	    fmt.Println(reply.Code)
 	    fmt.Println(reply.Message)
