@@ -429,7 +429,7 @@ func processResponse(cmd string, data *bufio.Reader) (returnObj *SpamDOut, err e
 					lineStr = string(line)
 
 					//TXT Table found, prepare to parse..
-					if lineStr[0:4] == TABLE_MARK {
+					if len(lineStr) >= 4 && lineStr[0:4] == TABLE_MARK {
 
 						section := []map[string]interface{}{}
 						tt := 0
